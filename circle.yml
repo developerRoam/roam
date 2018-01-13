@@ -1,6 +1,6 @@
 dependencies:
   pre:
-    - cd client && yarn install && yarn build
+    - cd client && npm install && npm build
 deployment:
   staging:
     branch: master
