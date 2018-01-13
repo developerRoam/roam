@@ -5,7 +5,10 @@ machine:
     version: 3.10.10
 dependencies:
   pre:
-    - cd client && yarn install && yarn build
+    - npm install -g istanbul && cd client && yarn install && yarn build
+test:
+  post:
+    - bash <(curl -s https://codecov.io/bash)
 deployment:
   useracceptance:
     branch: master

@@ -4,13 +4,14 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "test": "node node_modules/.bin/mocha -- specs/**/*_spec.js",
+    "test": "istanbul cover mocha --report lcovonly -- specs/**/*_spec.js && cd client && yarn test && codecov -t 2c786586-8160-44f0-9456-be45c0c33fab",
     "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "dependencies": {
     "body-parser": "~1.18.2",
     "chai": "^4.1.2",
     "chai-http": "^3.0.0",
+    "codecov": "^3.0.0",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "ejs": "~2.5.7",
