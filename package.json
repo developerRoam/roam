@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "test": "istanbul cover mocha --report lcovonly -- specs/**/*_spec.js && codecov -t 2c786586-8160-44f0-9456-be45c0c33fab",
+    "test": "istanbul cover mocha --report lcovonly -- specs/**/*_spec.js && cd client && yarn test && codecov -t 2c786586-8160-44f0-9456-be45c0c33fab",
     "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "dependencies": {
