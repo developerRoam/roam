@@ -1,6 +1,11 @@
+machine:
+  node:
+    version: 6.11.2
+  npm:
+    version: 3.10.10
 dependencies:
   pre:
-    - cd client && npm install && npm build
+    - cd client && yarn install && yarn build
 deployment:
   staging:
     branch: master
