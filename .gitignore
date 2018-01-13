@@ -31,3 +31,7 @@ npm-debug.log
 
 # RubyMine File
 .idea
+
+# React App
+client/build
+client/node_modules
