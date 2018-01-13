@@ -1,3 +1,3 @@
 # ROAM
 
-Current Build Status: [![CircleCI](https://circleci.com/gh/developerRoam/roam/tree/master.svg?style=svg)](https://circleci.com/gh/developerRoam/roam/tree/master)
+[![CircleCI](https://circleci.com/gh/developerRoam/roam.svg?style=svg&circle-token=ef2a50e7ed8272380ac85c8301f78623b68dfbf5)](https://circleci.com/gh/developerRoam/roam)
