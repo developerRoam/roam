@@ -1,6 +1,6 @@
 dependencies:
   pre:
-    - cd client && yarn build
+    - cd client && yarn install && yarn build
 deployment:
   staging:
     branch: master
