@@ -1,0 +1,38 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.10.1
+# ignores vulnerabilities until expiry date; change duration by modifying expiry date
+ignore:
+  'npm:growl:20160721':
+    - mocha > growl:
+        reason: Need to make sure there are no breaking changes
+        expires: '2018-02-12T23:35:58.155Z'
+  'npm:mime:20170907':
+    - istanbul-middleware > express > send > mime:
+        reason: Looking into removing this package entirely
+        expires: '2018-02-12T23:35:58.155Z'
+    - istanbul-middleware > express > serve-static > send > mime:
+        reason: Looking into removing this package entirely
+        expires: '2018-02-12T23:35:58.155Z'
+  'npm:qs:20170213':
+    - istanbul-middleware > body-parser > qs:
+        reason: Looking into removing this package entirely
+        expires: '2018-02-12T23:35:58.155Z'
+  'npm:superagent:20170807':
+    - chai-http > superagent:
+        reason: Looking into removing this package entirely
+        expires: '2018-02-12T23:35:58.155Z'
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:debug:20170905':
+    - mocha > debug:
+        patched: '2018-01-13T23:31:21.209Z'
+    - istanbul-middleware > body-parser > debug:
+        patched: '2018-01-13T23:31:21.209Z'
+  'npm:minimatch:20160620':
+    - istanbul-middleware > archiver > glob > minimatch:
+        patched: '2018-01-13T23:31:21.209Z'
+    - archiver > glob > minimatch:
+        patched: '2018-01-13T23:31:21.209Z'
+  'npm:ms:20170412':
+    - istanbul-middleware > body-parser > debug > ms:
+        patched: '2018-01-13T23:31:21.209Z'
