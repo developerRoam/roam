@@ -4,8 +4,10 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "test": "istanbul cover mocha --report lcovonly -- specs/**/*_spec.js && cd client && yarn test && codecov -t 2c786586-8160-44f0-9456-be45c0c33fab",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "test": "snyk auth d3e3cebe-cff8-4fbb-9890-3861c5f57777 && snyk test && istanbul cover mocha --report lcovonly -- specs/**/*_spec.js && cd client && yarn test && codecov -t 2c786586-8160-44f0-9456-be45c0c33fab",
+    "heroku-postbuild": "cd client && npm install && npm run build",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "body-parser": "~1.18.2",
@@ -15,9 +17,11 @@
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "ejs": "~2.5.7",
-    "express": "~4.15.5",
+    "express": "^4.16.0",
     "mocha": "~3.x.x",
     "morgan": "~1.9.0",
-    "serve-favicon": "~2.4.5"
-  }
+    "serve-favicon": "~2.4.5",
+    "snyk": "^1.68.0"
+  },
+  "snyk": true
 }
