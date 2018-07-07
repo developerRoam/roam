@@ -7,7 +7,8 @@
     "test": "snyk auth d3e3cebe-cff8-4fbb-9890-3861c5f57777 && snyk test && istanbul cover mocha --report lcovonly -- specs/**/*_spec.js && cd client && yarn test && codecov -t 2c786586-8160-44f0-9456-be45c0c33fab",
     "heroku-postbuild": "cd client && npm install && npm run build",
     "snyk-protect": "snyk protect",
-    "prepublish": "npm run snyk-protect"
+    "prepublish": "npm run snyk-protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "body-parser": "~1.18.2",
@@ -21,7 +22,7 @@
     "mocha": "~3.x.x",
     "morgan": "~1.9.0",
     "serve-favicon": "~2.4.5",
-    "snyk": "^1.68.0"
+    "snyk": "^1.88.2"
   },
   "snyk": true
 }
